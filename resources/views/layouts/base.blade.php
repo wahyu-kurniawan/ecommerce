@@ -62,7 +62,10 @@
                                                         <a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
                                                     </li>
 													<li class="menu-item" >
-                                                        <a title="Logout" href="#">Dashboard</a>
+                                                        <a title="Logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+														<form id="logout-form" action="{{ route('logout') }}" method="post">
+															@csrf
+														</form>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -74,8 +77,11 @@
                                                     <li class="menu-item" >
                                                         <a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
                                                     </li>
-                                                    <li class="menu-item" >
-                                                        <a title="Logout" href="#">Dashboard</a>
+													<li class="menu-item" >
+                                                        <a title="Logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+														<form id="logout-form" action="{{ route('logout') }}" method="post">
+															@csrf
+														</form>
                                                     </li>
                                                 </ul>
                                             </li>
